@@ -5,6 +5,7 @@ import SignUp from "../components/SignUp/SignUp";
 import Recipies from "../components/ChefRecipi/Recipies";
 import NotFoundPage from "../components/NotFound/NotFoundPage";
 import Login from "../components/Login/Login";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
             },
             {
                 path:"allChef/:id",
-                element:<Recipies></Recipies>,
+                element:<PrivateRoute><Recipies></Recipies></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/allChef/${params.id}`)
             }
         ]
