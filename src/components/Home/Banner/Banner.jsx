@@ -3,14 +3,14 @@ import React from 'react';
 const Banner = () => {
     return (
 
-        <div data-aos="zoom-in-up" className="carousel w-full lg:h-[600px] mb-12">
+        <div data-aos="zoom-in-up" className="carousel w-full lg:h-[600px] mb-12 mt-12">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src='https://i.ibb.co/XZcbNHF/banner.jpg' className="w-full rounded-xl" />
                 <div className="absolute rounded-xl flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-7 pl-12 lg:w-1/2'>
                         <h2 className='text-xl lg:text-6xl font-bold'>The only real stumbling block is fear of failure. In cooking, you've got to have a what-the-hell attitude.
                         </h2>
-                        <p className="font-bold text-lg lg:text-2xl text-end">Julia Child</p>
+                        
                         <div>
                             <button className="btn btn-primary mr-5">Explore</button>
 

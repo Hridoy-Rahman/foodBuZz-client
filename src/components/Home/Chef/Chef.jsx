@@ -1,0 +1,36 @@
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
+const Chef = () => {
+    const [chefs, setChefs] = useState([]);
+
+    useEffect(() => {
+        fetch("chef.json")
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setChefs(data);
+            });
+    }, []);
+
+    return (
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 p-4'>
+            {chefs.map(chef => (
+                <div className="card card-side bg-base-100 shadow-xl o-4" key={chef.id}>
+                    <figure><img className='w-72 h-60 p-4 rounded-full' src={chef.chefPicture} alt={chef.chefName} /></figure>
+                    <div className="card-body justify-end">
+                        <h2 className="card-title text-2xl">{chef.chefName}</h2>
+                        <p>Experience : {chef.yearsOfExperience} years</p>
+                        <p>Number Of Recipes : {chef.numberOfRecipes}</p>
+                        <p>Likes : {chef.likes}</p>
+                        <div className="card-actions justify-end">
+                            <Link to={`/recipies/${chef.id}`}><button  className="btn btn-primary">View Recipe</button></Link>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+};
+
+export default Chef;
