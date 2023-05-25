@@ -15,7 +15,7 @@ const Chef = () => {
 
     return (
         <div>
-            <h1 className='text-3xl lg:text-5xl font-bold text-center text-cyan-500 mb-8'>All Chef Of Our Community</h1>
+            <h1 className='text-3xl lg:text-5xl font-bold text-center text-cyan-500 mb-8'>Popular Chef <br /> Of Our Community</h1>
             <div  className='grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 mb-12'>
                 {chefs.map(chef => (
                     <div className="card card-side bg-base-100 shadow-xl o-4" key={chef.id}>
