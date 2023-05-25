@@ -3,7 +3,7 @@ import React from 'react';
 const Banner = () => {
     return (
 
-        <div data-aos="zoom-in-up" className="carousel w-full lg:h-[600px] mb-12 mt-12">
+        <div  className="carousel w-full lg:h-[600px] mb-12 mt-12">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src='https://i.ibb.co/XZcbNHF/banner.jpg' className="w-full rounded-xl" />
                 <div className="absolute rounded-xl flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">

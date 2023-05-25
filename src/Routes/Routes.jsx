@@ -6,6 +6,7 @@ import Recipies from "../components/ChefRecipi/Recipies";
 import NotFoundPage from "../components/NotFound/NotFoundPage";
 import Login from "../components/Login/Login";
 import PrivateRoute from "./PrivateRoute";
+import Blog from "../components/Blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
                 path:"allChef/:id",
                 element:<PrivateRoute><Recipies></Recipies></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/allChef/${params.id}`)
+            },
+            {
+                path:"blog",
+                element: <Blog></Blog>
             }
         ]
     },

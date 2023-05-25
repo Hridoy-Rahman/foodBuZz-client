@@ -20,7 +20,7 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
             </li>
             <li>
-                <Link to="/blogs">Blog</Link>
+                <Link to="/blog">Blog</Link>
             </li>
             {user?.email ? (
                 <>
@@ -38,7 +38,7 @@ const Navbar = () => {
 
 
     return (
-        <div data-aos="zoom-in" className="navbar bg-base-100 mb-12 p-4 items-center relative z-10">
+        <div  className="navbar bg-base-100 mb-12 p-4 items-center relative z-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

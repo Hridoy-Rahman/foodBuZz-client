@@ -50,7 +50,7 @@ const Login = () => {
 
     return (
         <div className="hero  bg-base-200 lg:mb-12">
-            <div data-aos="zoom-in" className="hero-content  lg:w-3/4 p-6 lg:p-12">
+            <div className="hero-content  lg:w-3/4 p-6 lg:p-12">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
                         <h1 className="text-5xl font-bold mb-8 text-center">Login</h1>
@@ -59,7 +59,7 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" name='email' placeholder="Email" className="input input-bordered" />
+                                <input type="text" name='email' placeholder="Email" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -71,6 +71,7 @@ const Login = () => {
                                         name='password'
                                         placeholder='Password'
                                         className='input input-bordered'
+                                        required
                                     />
                                     <button
                                         type='button'

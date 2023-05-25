@@ -62,7 +62,7 @@ const SignUp = () => {
 
     return (
         <div  className="hero  bg-base-200 lg:mb-12">
-            <div data-aos="fade-up" className="hero-content  lg:w-3/4 p-6 lg:p-12">
+            <div  className="hero-content  lg:w-3/4 p-6 lg:p-12">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
                         <h1 className="text-5xl font-bold mb-8 text-center">Sign Up</h1>
@@ -71,7 +71,7 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" name='name' placeholder="Name" className="input input-bordered" />
+                                <input type="text" name='name' placeholder="Name" className="input input-bordered" required/>
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -89,6 +89,7 @@ const SignUp = () => {
                                         name='password'
                                         placeholder='Password'
                                         className='input input-bordered'
+                                        required
                                     />
                                     <button
                                         type='button'
@@ -113,6 +114,7 @@ const SignUp = () => {
                                         className='input input-bordered'
                                         value={confirmPassword}
                                         onChange={(e) => setConfirmPassword(e.target.value)}
+                                        required
                                     />
                                     <button
                                         type='button'
@@ -128,7 +130,7 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="url" name='photo' placeholder="Photo URL" className="input input-bordered" />
+                                <input type="url" name='photo' placeholder="Photo URL" className="input input-bordered" required/>
                             </div>
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
