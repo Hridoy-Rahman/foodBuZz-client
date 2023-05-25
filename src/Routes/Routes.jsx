@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             {
                 path:"allChef/:id",
                 element:<PrivateRoute><Recipies></Recipies></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/allChef/${params.id}`)
+                loader: ({ params }) => fetch(`https://food-bu-zz-server.vercel.app/allChef/${params.id}`)
             },
             {
                 path:"blog",
