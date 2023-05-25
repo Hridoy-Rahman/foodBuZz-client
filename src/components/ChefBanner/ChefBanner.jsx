@@ -7,7 +7,7 @@ const ChefBanner = () => {
     return (
         <div className="hero mt-12 mb-12 rounded-xl bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse justify-between">
-                <img src={`${chef.chefPicture}`} className="h-20 lg:h-60 rounded-lg shadow-2xl" />
+                <img src={`${chef.chefPicture}`} className="h-60 rounded-lg shadow-2xl" />
                 <div>
                     <h1 className="text-3xl text-center font-bold">{chef.chefName}</h1>
                     <p className="py-6">{chef.bio}</p>
