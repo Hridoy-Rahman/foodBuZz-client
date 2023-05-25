@@ -4,7 +4,8 @@ import { AuthContext } from '../../Provider/AuthProvider';
 
 
 const Navbar = () => {
-    const { user, logOut, signedUser } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user)
     const [hovered, setHovered] = useState(false);
 
     const handleLogout = () => {
@@ -23,12 +24,6 @@ const Navbar = () => {
             </li>
             {user?.email ? (
                 <>
-                    <li>
-                        <Link to="/addatoy">Add a Toy</Link>
-                    </li>
-                    <li>
-                        <Link to={`/mytoys/${user.user_email}`}>My Toys</Link>
-                    </li>
                     <li>
                         <button onClick={handleLogout}>Log Out</button>
                     </li>
@@ -62,8 +57,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <Link className="btn btn-ghost normal-case text-xl">
-                    <img className="h-12 w-12 rounded-lg" src="https://i.ibb.co/KLj30WC/logo.png" alt="" />
-                    <p>Kits For Kids</p>
+                    
+                    <p className='text-2xl'>FoodBuZz</p>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -76,21 +71,21 @@ const Navbar = () => {
                             onMouseEnter={() => setHovered(true)}
                             onMouseLeave={() => setHovered(false)}
                         >
-                            {signedUser?.photo ? (
+                            {user?.photoURL ? (
                                 hovered ? (
                                     <>
                                         <img
                                             className="h-8 w-8 rounded-full"
-                                            src={signedUser.photo}
-                                            alt={signedUser.name}
+                                            src={user.photoURL}
+                                            alt={user.displayName}
                                         />
-                                        <div className="tooltip">{signedUser.name}</div>
+                                        <div className="tooltip">{user.displayName}</div>
                                     </>
                                 ) : (
                                     <img
                                         className="h-8 w-8 rounded-full"
-                                        src={signedUser.photo}
-                                        alt={signedUser.name}
+                                        src={user.photoURL}
+                                        alt={user.displayName}
                                     />
                                 )
                             ) : (

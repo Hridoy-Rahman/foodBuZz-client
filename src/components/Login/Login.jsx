@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Provider/AuthProvider';
 import GoogleLogin from '../GoogleLogIn/GoogleLogIn';
+import GithubLogin from '../GitHubLogin/GitHubLogin';
 
 
 
@@ -90,6 +91,7 @@ const Login = () => {
                         </form>
                         <p className='text-center my-4'>Don't Have Account? <Link className='text-orange-500 font-bold' to='/signup'>Sign Up</Link></p>
                         <GoogleLogin></GoogleLogin>
+                        <GithubLogin></GithubLogin>
                     </div>
                 </div>
             </div>
