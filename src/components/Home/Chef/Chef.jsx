@@ -5,7 +5,7 @@ const Chef = () => {
     const [chefs, setChefs] = useState([]);
 
     useEffect(() => {
-        fetch("chef.json")
+        fetch("http://localhost:5000/allChef")
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -24,7 +24,7 @@ const Chef = () => {
                         <p>Number Of Recipes : {chef.numberOfRecipes}</p>
                         <p>Likes : {chef.likes}</p>
                         <div className="card-actions justify-end">
-                            <Link to={`/recipies/${chef.id}`}><button  className="btn btn-primary">View Recipe</button></Link>
+                            <Link to={`/allChef/${chef.id}`}><button  className="btn btn-primary">View Recipe</button></Link>
                         </div>
                     </div>
                 </div>
